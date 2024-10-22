@@ -1,0 +1,5 @@
+export * from './create-producer-controller'
+export * from './update-producer-controller'
+export * from './delete-producer-controller'
+export * from './get-dashboard-controller'
+export * from './controller'

@@ -1,0 +1,34 @@
+services:
+  db:
+    image: mongo
+    container_name: mongo-database
+    restart: always
+    ports:
+      - "27017:27017"
+
+  postgres:
+    image: postgres
+    container_name: postgres-database
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./test/mocks/001-producers.sql:/docker-entrypoint-initdb.d/001-producers.sql
+      - ./test/mocks/002-crops_insert.sql:/docker-entrypoint-initdb.d/002-crops_insert.sql
+      - ./test/mocks/003-mock_insert.sql:/docker-entrypoint-initdb.d/003-mock_insert.sql
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      MONGO_URL: "mongodb://mongo-database:27017/app"
+      JWT_SECRET: "my-secret-password"
+      APP_ENV: dev
+    depends_on:
+      - db
