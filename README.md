@@ -8,8 +8,8 @@ This repository contains a Node.js application designed for testing purposes, pa
 <img alt="/assets/brain_ag-test.drawio.png" src="/assets/brain_ag-test.drawio.png">
 
 
-## Postman Connlection
-[collection](/assets/brain_ag-test.postman_collection.json)
+## Postman Collection
+[<img alt="postman-badge" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white">](/assets/brain_ag-test.postman_collection.json)
 
 
 ## Dockerfile Structure
