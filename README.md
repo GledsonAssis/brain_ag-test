@@ -4,6 +4,14 @@
 
 This repository contains a Node.js application designed for testing purposes, particularly around user-related operations. The project structure includes use cases, domain entities, value objects (VOs), infrastructure components, and interfaces for controllers and presentations. The application uses **Express** for routing, **Mongoose** as the ODM for MongoDB, and **JWT** for authorization.
 
+## Database Structure
+<img alt="/assets/brain_ag-test.drawio.png" src="/assets/brain_ag-test.drawio.png">
+
+
+## Postman Connlection
+[collection](/assets/brain_ag-test.postman_collection.json)
+
+
 ## Dockerfile Structure
 
 The Dockerfile is multi-staged to ensure efficient builds, separating the build process from the production runtime. Here's an outline of the Docker stages:

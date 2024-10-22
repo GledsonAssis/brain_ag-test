@@ -47,7 +47,7 @@ describe("Producer", () => {
 
     const producer = new Producer(producerData);
 
-    expect(producer.getIsActive()).toBe(true); // isActive defaults to true
+    expect(producer.getIsActive()).toBe(true);
   });
 
   it("should return responseProducer with farms data", () => {
@@ -106,7 +106,7 @@ describe("Producer", () => {
 
     const response = producer.responseProducer();
 
-    expect(response.id).toBeUndefined(); // No id provided, should be undefined
+    expect(response.id).toBeUndefined();
   });
 
   it("should handle _id field correctly as id", () => {

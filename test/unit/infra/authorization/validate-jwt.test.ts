@@ -2,7 +2,6 @@ import { validateJWT } from "@/infra/authorization/validate-jwt";
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 
-// Mock do `jsonwebtoken`
 jest.mock("jsonwebtoken");
 
 describe("validateJWT middleware", () => {

@@ -224,7 +224,7 @@ describe("AJVCompile", () => {
     const schema = {
       type: "object",
       properties: {
-        dateField: { type: "string", format: "date" }, // Expecting date format
+        dateField: { type: "string", format: "date" },
       },
       required: ["dateField"],
       errorMessage: {
@@ -236,7 +236,7 @@ describe("AJVCompile", () => {
     };
 
     const invalidData = {
-      dateField: "invalid-date", // This will fail the date validation
+      dateField: "invalid-date",
     };
 
     const result = await ajvCompile.compile(schema, invalidData);
@@ -250,7 +250,7 @@ describe("AJVCompile", () => {
     const schema = {
       type: "object",
       properties: {
-        dateField: { type: "string", format: "date" }, // Expecting date format
+        dateField: { type: "string", format: "date" },
       },
       required: ["dateField"],
       errorMessage: {
@@ -262,12 +262,12 @@ describe("AJVCompile", () => {
     };
 
     const validData = {
-      dateField: "2024-10-18", // This is a valid date
+      dateField: "2024-10-18",
     };
 
     const result = await ajvCompile.compile(schema, validData);
 
     expect(result.isValid).toBe(true);
-    expect(result.message).toBe(""); // No error message for valid date
+    expect(result.message).toBe("");
   });
 });

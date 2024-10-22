@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "8408193d-9a75-4279-a551-875f57b744a4",
+		"name": "brain_ag-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30495721",
+		"_collection_link": "https://orange-desert-714645.postman.co/workspace/Team-Workspace~dea60507-3164-48f7-829e-21caa9f7106a/collection/30495721-8408193d-9a75-4279-a551-875f57b744a4?action=share&source=collection_link&creator=30495721"
+	}, 
+	"item": [
+		{
+			"name": "/v1/producers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.WHDfHlX4MCE-koQFp8lDU4Ei45ZilvlfDfASW1j4qlM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"teste abcdfe\",\r\n    \"document\": \"01234567890\",\r\n    \"farms\": [\r\n        {\r\n            \"name\": \"fazenda Teste AC\",\r\n            \"city\": \"Cidade 1\",\r\n            \"state\": \"AC\",\r\n            \"total_area_hectares\": 120,\r\n            \"arable_area_hectares\": 50,\r\n            \"vegetation_area_hectares\": 70,\r\n            \"crops\": [\"1\", \"5\"]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/producers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"producers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.WHDfHlX4MCE-koQFp8lDU4Ei45ZilvlfDfASW1j4qlM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"teste abcdfe\",\r\n    \"document\": \"01234567890\",\r\n    \"farms\": [\r\n        {\r\n            \"name\": \"fazenda Teste AC\",\r\n            \"city\": \"Cidade 1\",\r\n            \"state\": \"AC\",\r\n            \"total_area_hectares\": 120,\r\n            \"arable_area_hectares\": 50,\r\n            \"vegetation_area_hectares\": 70,\r\n            \"crops\": [\"1\", \"5\"]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/producers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"producers"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "x-correlation-id",
+							"value": "ec241a14-16e3-42ce-b22f-fc4cb50e79a2"
+						},
+						{
+							"key": "x-request-id",
+							"value": "8bff1147-ccba-487d-8439-2f3f2df19fc8"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "306"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"132-hBV2ifhYW6vXLbXZ7X9ODoe5CUs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Oct 2024 03:48:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"70\",\n    \"name\": \"teste abcdfe\",\n    \"document\": \"01234567890\",\n    \"farms\": [\n        {\n            \"id\": \"67\",\n            \"name\": \"fazenda Teste AC\",\n            \"city\": \"Cidade 1\",\n            \"state\": \"AC\",\n            \"total_area_hectares\": 120,\n            \"arable_area_hectares\": 50,\n            \"vegetation_area_hectares\": 70,\n            \"crops\": [\n                {\n                    \"id\": \"1\",\n                    \"name\": \"Soja\"\n                },\n                {\n                    \"id\": \"5\",\n                    \"name\": \"Cana de Açucar\"\n                }\n            ]\n        }\n    ],\n    \"isActive\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "/v1/producers/:id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.WHDfHlX4MCE-koQFp8lDU4Ei45ZilvlfDfASW1j4qlM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"teste abcdf\",\r\n    \"farms\": [\r\n        {\r\n            \"id\": \"1\",\r\n            \"name\": \"fazenda Teste\",\r\n            \"city\": \"Cidade 2\",\r\n            \"state\": \"RN\",\r\n            \"total_area_hectares\": 100,\r\n            \"arable_area_hectares\": 50,\r\n            \"vegetation_area_hectares\": 50,\r\n            \"crops\": [\r\n                \"1\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/producers/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"producers",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.WHDfHlX4MCE-koQFp8lDU4Ei45ZilvlfDfASW1j4qlM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"teste abcdf\",\r\n    \"farms\": [\r\n        {\r\n            \"id\": \"67\",\r\n            \"name\": \"fazenda Teste\",\r\n            \"city\": \"Cidade 2\",\r\n            \"state\": \"RN\",\r\n            \"total_area_hectares\": 100,\r\n            \"arable_area_hectares\": 50,\r\n            \"vegetation_area_hectares\": 50,\r\n            \"crops\": [\r\n                \"1\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/producers/70",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"producers",
+								"70"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "x-correlation-id",
+							"value": "70d99d70-b3b1-46b7-a4ea-7f0adc29038b"
+						},
+						{
+							"key": "x-request-id",
+							"value": "fed036ef-96ea-4240-a348-cf0aed2a9ac0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10a-mLztHT5zDdoTYMOjHtzTI7279cU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Oct 2024 03:51:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"70\",\n    \"name\": \"teste abcdf\",\n    \"document\": \"01234567890\",\n    \"farms\": [\n        {\n            \"id\": \"67\",\n            \"name\": \"fazenda Teste\",\n            \"city\": \"Cidade 2\",\n            \"state\": \"RN\",\n            \"total_area_hectares\": 100,\n            \"arable_area_hectares\": 50,\n            \"vegetation_area_hectares\": 50,\n            \"crops\": [\n                {\n                    \"id\": \"1\",\n                    \"name\": \"Soja\"\n                }\n            ]\n        }\n    ],\n    \"isActive\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "/v1/producers/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.WHDfHlX4MCE-koQFp8lDU4Ei45ZilvlfDfASW1j4qlM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/v1/producers/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"producers",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.WHDfHlX4MCE-koQFp8lDU4Ei45ZilvlfDfASW1j4qlM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/v1/producers/70",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"producers",
+								"70"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "x-correlation-id",
+							"value": "65e01211-1820-4f56-9495-0980f4fedb8a"
+						},
+						{
+							"key": "x-request-id",
+							"value": "f327c188-a418-4756-8a56-c95343957112"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-l3mPrVngPEmrOn7/XakvWcwE3cM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Oct 2024 03:52:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Id 70 removed with success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/v1/dashboard/totals",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.WHDfHlX4MCE-koQFp8lDU4Ei45ZilvlfDfASW1j4qlM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/v1/dashboard/totals",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"dashboard",
+						"totals"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.WHDfHlX4MCE-koQFp8lDU4Ei45ZilvlfDfASW1j4qlM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/v1/dashboard/totals",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"dashboard",
+								"totals"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "x-correlation-id",
+							"value": "c9474501-ceb9-4d02-80bd-4a767fdf454b"
+						},
+						{
+							"key": "x-request-id",
+							"value": "80433b02-4823-4a77-b11f-44c873bd281a"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "600"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"258-D1c+PYMhlL6uj4uUdVyrpxJjDiY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Oct 2024 04:11:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total_farms\": \"15\",\n    \"total_farms_area_hectares\": \"1678.00\",\n    \"farms_by_state\": [\n        {\n            \"state\": \"RN\",\n            \"farm_count\": 1\n        },\n        {\n            \"state\": \"MG\",\n            \"farm_count\": 2\n        },\n        {\n            \"state\": \"SC\",\n            \"farm_count\": 2\n        },\n        {\n            \"state\": \"DE\",\n            \"farm_count\": 1\n        },\n        {\n            \"state\": \"PI\",\n            \"farm_count\": 1\n        },\n        {\n            \"state\": \"RS\",\n            \"farm_count\": 3\n        },\n        {\n            \"state\": \"SP\",\n            \"farm_count\": 2\n        },\n        {\n            \"state\": \"MA\",\n            \"farm_count\": 1\n        },\n        {\n            \"state\": \"AL\",\n            \"farm_count\": 2\n        }\n    ],\n    \"farms_by_crop\": [\n        {\n            \"crop\": \"Café\",\n            \"farm_count\": 6\n        },\n        {\n            \"crop\": \"Cana de Açucar\",\n            \"farm_count\": 2\n        },\n        {\n            \"crop\": \"Soja\",\n            \"farm_count\": 5\n        },\n        {\n            \"crop\": \"Algodão\",\n            \"farm_count\": 8\n        },\n        {\n            \"crop\": \"Milho\",\n            \"farm_count\": 9\n        }\n    ],\n    \"total_arable_area\": \"1138.00\",\n    \"total_vegetation_area\": \"540.00\"\n}"
+				}
+			]
+		}
+	]
+}

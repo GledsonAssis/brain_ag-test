@@ -14,7 +14,7 @@ describe("Crop", () => {
     const crop = new Crop(cropData);
 
     expect(crop.getId()).toBe("123");
-    expect(crop.getName()).toBeUndefined(); // name is optional
+    expect(crop.getName()).toBeUndefined();
   });
 
   it("should return a valid responseCrop object", () => {

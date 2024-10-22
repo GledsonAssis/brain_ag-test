@@ -37,13 +37,13 @@ describe("Cnpj", () => {
 
   it("should validate a correct CNPJ", () => {
     const cnpjInstance = new Cnpj();
-    const validCnpj = "12.345.678/0001-95"; // CNPJ should be valid for this example
+    const validCnpj = "12.345.678/0001-95";
     expect(cnpjInstance.validate(validCnpj)).toBe(true);
   });
 
   it("should return false for a CNPJ with incorrect check digits", () => {
     const cnpjInstance = new Cnpj();
-    const invalidCnpj = "12.345.678/0001-00"; // CNPJ with incorrect check digits
+    const invalidCnpj = "12.345.678/0001-00";
     expect(cnpjInstance.validate(invalidCnpj)).toBe(false);
   });
 
@@ -51,14 +51,14 @@ describe("Cnpj", () => {
     const cnpjInstance = new Cnpj();
     const validCnpj = "123456780001";
     const firstDigit = cnpjInstance.calculateDigit(validCnpj, cnpjInstance.FIRST_DIGIT_FACTOR);
-    expect(firstDigit).toBe(9); // Replace with expected first digit for this CNPJ
+    expect(firstDigit).toBe(9);
   });
 
   it("should calculate the second digit correctly", () => {
     const cnpjInstance = new Cnpj();
     const validCnpj = "1234567800019";
     const secondDigit = cnpjInstance.calculateDigit(validCnpj, cnpjInstance.SECOND_DIGIT_FACTOR);
-    expect(secondDigit).toBe(5); // Replace with expected second digit for this CNPJ
+    expect(secondDigit).toBe(5);
   });
 
   it("should extract the check digits correctly", () => {

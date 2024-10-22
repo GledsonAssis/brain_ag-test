@@ -31,13 +31,13 @@ describe("Cpf", () => {
 
   it("should validate a correct CPF", () => {
     const cpfInstance = new Cpf();
-    const validCpf = "123.456.789-09"; // CPF should be valid for this example
+    const validCpf = "123.456.789-09";
     expect(cpfInstance.validate(validCpf)).toBe(true);
   });
 
   it("should return false for a CPF with incorrect check digits", () => {
     const cpfInstance = new Cpf();
-    const invalidCpf = "123.456.789-12"; // CPF with incorrect check digits
+    const invalidCpf = "123.456.789-12";
     expect(cpfInstance.validate(invalidCpf)).toBe(false);
   });
 
@@ -45,14 +45,14 @@ describe("Cpf", () => {
     const cpfInstance = new Cpf();
     const validCpf = "123456789";
     const firstDigit = cpfInstance.calculateDigit(validCpf, cpfInstance.FIRST_DIGIT_FACTOR);
-    expect(firstDigit).toBe(0); // Replace with expected first digit for this CPF
+    expect(firstDigit).toBe(0);
   });
 
   it("should calculate the second digit correctly", () => {
     const cpfInstance = new Cpf();
     const validCpf = "123456789";
     const secondDigit = cpfInstance.calculateDigit(validCpf, cpfInstance.SECOND_DIGIT_FACTOR);
-    expect(secondDigit).toBe(9); // Replace with expected second digit for this CPF
+    expect(secondDigit).toBe(9);
   });
 
   it("should extract the check digits correctly", () => {

@@ -115,7 +115,7 @@ describe("Farm", () => {
       arable_area_hectares: 50,
       vegetation_area_hectares: 30,
       crops: [
-        { id: "crop1", name: undefined }, // mock implementation of Crop class
+        { id: "crop1", name: undefined },
         { id: "crop2", name: "Crop 2" },
       ],
     });
@@ -165,7 +165,7 @@ describe("Farm", () => {
 
     const response = farm.responseFarm();
 
-    expect(response.id).toBeUndefined(); // No id provided, should be undefined
+    expect(response.id).toBeUndefined();
   });
 
   it("should handle _id field correctly as id", () => {

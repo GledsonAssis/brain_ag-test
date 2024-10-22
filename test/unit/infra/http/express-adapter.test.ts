@@ -92,7 +92,6 @@ describe("ExpressAdapter", () => {
     );
   });
 
-  // Use middleware functions with the express app
   it("should use middleware function with the express app", () => {
     const mockMiddleware = jest.fn();
 
@@ -101,7 +100,6 @@ describe("ExpressAdapter", () => {
     expect(adapter.app.use).toHaveBeenCalledWith(mockMiddleware);
   });
 
-  // Log route registration details accurately
   it("should log route registration details correctly", () => {
     const mockCallback = jest.fn();
     const url = "/test";
@@ -153,7 +151,6 @@ describe("ExpressAdapter", () => {
     );
   });
 
-  // Attempt to register a route with an unsupported HTTP method
   it("should throw an error when registering a route with an unsupported HTTP method", () => {
     const mockCallback = jest.fn();
     const unsupportedMethod = "invalid";
