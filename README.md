@@ -216,7 +216,7 @@ To run the project, you may need to set up the following environment variables:
 
 ```bash
 JWT_SECRET=<your-secret-key>
-MONGODB_URI=<your-mongodb-uri>
+POSTGRES_CONNECTION_STRING=<your-postgres-uri>
 ```
 
 ## License

@@ -27,7 +27,7 @@ services:
       - "3000:3000"
     restart: unless-stopped
     environment:
-      MONGO_URL: "mongodb://mongo-database:27017/app"
+      POSTGRES_CONNECTION_STRING: "postgres://postgres:password@postgres-database:5432/producers"
       JWT_SECRET: "my-secret-password"
       APP_ENV: dev
     depends_on:
